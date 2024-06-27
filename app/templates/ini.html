@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block conteudo  %}
+
+<form action='{% url "revenda" %}'method='post' data-bs-theme="dark"  >
+    {% csrf_token %}
+        <div style='text-align: center;'class="container" data-bs-theme="dark" >
+            <h1>Revenda</h1>
+            <div class="container text-center" data-bs-theme="dark" >
+                <div class="row ">
+                  <div class="col">
+                    <div class="input-group mb-3">
+
+                        <span class="input-group-text" id="basic-addon1">TD</span>
+                        <input name='td' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">Placa</span>
+                        <input name='placa' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                        
+                        <span class="input-group-text" id="basic-addon1">Motorista</span>
+                        <input name='motorista' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                        
+                        <span class="input-group-text" id="basic-addon1">ajudante</span>
+                        <input name='ajudante' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                     
+                        <span class="input-group-text" id="basic-addon1">cliente</span>
+                        <input name='cliente' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                            
+                        <span class="input-group-text" id="basic-addon1">km</span>
+                        <input name='km' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">nota 1</span>
+                        <input name='nota_1' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                    
+                        <span class="input-group-text" id="basic-addon1">nota 2</span>
+                        <input name='nota_2' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                        
+                        <span class="input-group-text" id="basic-addon1">p2</span>
+                        <input name='p2' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">p5</span>
+                        <input name='p5' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">p8</span>
+                        <input name='p8' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">p13</span>
+                        <input name='p13' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">p20</span>
+                        <input name='p20' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">p45</span>
+                        <input name='p45' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">OBS</span>
+                        <input name='OBS' type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                                            
+                        <span class="input-group-text" id="basic-addon1">data</span>
+                        <input name='data' type="date" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">entrada</span>
+                        <input name='entrada' type="time" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+
+                        <span class="input-group-text" id="basic-addon1">saida</span>
+                        <input name='saida' type="time" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"required>
+                        <button class='form-control-sm'>Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+<div>
+
+
+    {% endblock conteudo %}

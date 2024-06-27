@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block conteudo%}
+
+<form class="form-inline my-2 my-lg-0"><br>
+    <div class='container-md'>
+            <div class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"  >
+            <br>
+            <input class="form-control mr-sm-2" name="q" type="text" placeholder="Search" aria-label="Search">
+            <br>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar Clientes</button>
+            <br>
+            </div>
+    </div>
+</form>
+
+
+    <div class='container text-center'>
+        <div class="row">
+            <div class="col">
+
+                <h1>  Relação da TD com as revendas<h1>
+            </div>
+           
+            <div class="col">
+                <table id="customers" border="1" class='table table-dark table-striped-columns p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3'>
+                    <thead>
+                        <th>Id</th>
+                        <th>TD</th>
+                        <th>Data</th>
+                        <th>Placa</th>
+                        <th>Motorista</th>
+                        <th>Ajudante</th>
+                        <th>Km</th>
+                        <th>cliente</th>
+                        <th>nota 1</th>
+                        <th>nota 2</th>
+                        <th>p2</th>
+                        <th>p5</th>
+                        <th>p8</th>
+                        <th>p13</th>
+                        <th>p20</th>
+                        <th>p45</th>
+                        <th>Saida</th>
+                        <th>Chegada</th>
+                        <th>OBS</th>
+                       
+                        
+                        <th colspan="2" id="mid">Atualizar e deletar</th>
+                    </thead>
+                    {% for tab_td in mem %}
+                    <tr>
+                        <td>{{tab_td.id}}</td>
+                        <td>{{tab_td.td}}</td>
+                        <td>{{tab_td.data}}</td>
+                        <td>{{tab_td.placa}}</td>
+                        <td>{{tab_td.motorista}}</td>
+                        <td>{{tab_td.ajudante}}</td>
+                        <td>{{tab_td.km}}</td>
+                        <td>{{tab_td.cliente}}</td>
+                        <td>{{tab_td.nota_1}}</td>
+                        <td>{{tab_td.nota_2}}</td>
+                        <td>{{tab_td.p2}}</td>
+                        <td>{{tab_td.p5}}</td>
+                        <td>{{tab_td.p8}}</td>
+                        <td>{{tab_td.p13}}</td>
+                        <td>{{tab_td.p20}}</td>
+                        <td>{{tab_td.p45}}</td>
+                        <td>{{tab_td.saida}}</td>
+                        <td>{{tab_td.entrada}}</td>
+                        <td>{{tab_td.OBS}}</td>
+                        
+                        <td>
+                            <a href="update/{{tab_td.id}}"><button id="up"class="p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Atualizar</button></a>
+                        </td>
+                        <td>
+                            <a href="delete/{{tab_td.id}}"><button id="del"class="p-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">delete</button></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>    
+    </div>
+
+
+</div>
+{% endblock conteudo%}

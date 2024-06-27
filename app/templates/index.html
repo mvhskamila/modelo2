@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+{% block conteudo  %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<body>
+    <div class="container"border="1">
+        <h1>Tabela de registros de TD </h1> <li>{{viagem.placa}}</li>
+        <nav class="navbar bg-body-tertiary navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="{% url 'add' %}"><button id="new3" class="btn btn-primary">Novo registro</button></a>
+            </div>
+        </nav>
+        
+        <table id="customers" border="1" class='table table-dark table-striped-columns p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3'>
+            <thead>
+                <th>Id</th>
+                <th>TD</th>
+                <th>Data</th>
+                <th>Placa</th>
+                <th>Motorista</th>
+                <th>Ajudante</th>
+                <th>Km</th>
+                <th>cliente</th>
+                <th>nota 1</th>
+                <th>nota 2</th>
+                <th>p2</th>
+                <th>p5</th>
+                <th>p8</th>
+                <th>p13</th>
+                <th>p20</th>
+                <th>p45</th>
+                <th>Saida</th>
+                <th>Chegada</th>
+                <th>OBS</th>
+               
+                
+                <th colspan="2" id="mid">Atualizar e deletar</th>
+            </thead>
+            {% for tab_td in mem %}
+            <tr>
+                <td>{{tab_td.id}}</td>
+                <td>{{tab_td.td}}</td>
+                <td>{{tab_td.data}}</td>
+                <td>{{tab_td.placa}}</td>
+                <td>{{tab_td.motorista}}</td>
+                <td>{{tab_td.ajudante}}</td>
+                <td>{{tab_td.km}}</td>
+                <td>{{tab_td.cliente}}</td>
+                <td>{{tab_td.nota_1}}</td>
+                <td>{{tab_td.nota_2}}</td>
+                <td>{{tab_td.p2}}</td>
+                <td>{{tab_td.p5}}</td>
+                <td>{{tab_td.p8}}</td>
+                <td>{{tab_td.p13}}</td>
+                <td>{{tab_td.p20}}</td>
+                <td>{{tab_td.p45}}</td>
+                <td>{{tab_td.saida}}</td>
+                <td>{{tab_td.entrada}}</td>
+                <td>{{tab_td.OBS}}</td>
+                
+                <td>
+                    <a href="update/{{tab_td.id}}"><button id="up"class="p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Atualizar</button></a>
+                </td>
+                <td>
+                    <a href="delete/{{tab_td.id}}"><button id="del"class="p-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">delete</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+
+    </div>
+</body>
+{% endblock conteudo %}
